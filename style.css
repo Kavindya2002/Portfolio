@@ -5,70 +5,75 @@
     box-sizing: border-box;
 }
 :root{
-    --body-color: #efefef;
-    --nav-color:#fff ; 
+    --body-color: #000000;
+    --nav-color:#000000 ; 
     --bg-color: #fff;
     --primary-color: #edf2fc;
     --secondary-color:#212121;
 }
 .rounded-image {
-    width: 200px; /* Adjust size as needed */
-    height: 250px; /* Ensure width and height are equal */
-    border-radius: 75%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image fits within the circle */
-    position: fixed; /* Fixes the position relative to the viewport */
-    top: 50%; /* Center vertically */
-    right: 90px; /* Position 20px from the right edge */
-    transform: translateY(-50%); /* Adjusts to perfectly center vertically */
+    width: 200px;           /* ✅ Equal width */
+    height: 220px;          /* ✅ Equal height */
+    border-radius: 50%;     /* ✅ Makes it a perfect circle */
+    object-fit: cover;      /* ✅ Ensures it fills the circle nicely */
+    position: fixed;
+    top: 50%;
+    right: 150px;
+    transform: translateY(-50%);
 }
-.dark-theme{
-    --body-color: #0a0a0a;
-    --nav-color:#000;
-    --bg-color: #000;
-}
-body{
-    background-color: var(--body-color);
-    transform: background 0.3s;
-}
-#dark-btn{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: #ccc;
-    width: 45px;
-    border-radius: 15px;
-    padding: 2px 3px ;
-    cursor: pointer;
-    display: flex;
-    transition: padding-left 0.5s, background 0.5s;
-}
-#dark-btn span{
-    width: 18px;
-    height: 18px;
-    background: #fff;
-    border-radius: 50%;
-    display: inline-block;
-}
-#dark-btn.dark-btn-on{
-    padding-left: 23px;
-    background: #0a0a0a;
+
+.container{
+    padding: 10px 10%;
 }
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--nav-color);
-    padding: 5px 5%;
-    position: sticky;
-    top: 0;
-    z-index:100 ;
+    flex-wrap: wrap;
+    background-color: var(--nav-color);
 }
-.logo{
-    width: 75px;
-    margin-right: 45px;
+.logo {
+    width: 100px;
 }
-.nav-left,.nav-right{
-    display: flex;
-    align-items: center;
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
 }
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+body{
+    background-color: var(--body-color);
+    transform: background 0.3s;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:#2563eb ;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 18%;
+    font-size: 30px;
+    color: #fff;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color:#2563eb;
+}
+
 
