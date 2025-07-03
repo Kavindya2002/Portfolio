@@ -11,15 +11,18 @@
     --primary-color: #edf2fc;
     --secondary-color:#212121;
 }
-.rounded-image {
-    width: 200px;           /* ✅ Equal width */
-    height: 220px;          /* ✅ Equal height */
-    border-radius: 50%;     /* ✅ Makes it a perfect circle */
-    object-fit: cover;      /* ✅ Ensures it fills the circle nicely */
-    position: fixed;
-    top: 50%;
-    right: 150px;
-    transform: translateY(-50%);
+#header::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 150px;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 220px;
+  border-radius: 50%;
+  background-image: url('images/photo.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .container{
@@ -75,5 +78,28 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color:#2563eb;
 }
-
-
+/*-------------------------About----------------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius:15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight:600;
+    color: #fff;
+}
